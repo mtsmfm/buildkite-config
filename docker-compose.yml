@@ -47,6 +47,9 @@ services:
       - redis
       - memcached
 
+    tmpfs:
+      - /rails/tmp:size=1G,exec
+
   postgresdb:
     <<: *default
     depends_on:
